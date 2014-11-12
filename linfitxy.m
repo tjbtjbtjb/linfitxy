@@ -72,12 +72,13 @@
 %                 or Octave 3.4.0 with optim 1.0.16 package
 %
 %
-%   - -  Paris Diderot feb 2014                             - -
+%   - -  Paris Diderot nov 2014                             - -
 %        Contacts : tristan.beau@univ-paris-diderot.fr , 
 %                   julien.browaeys@univ-paris-diderot.fr
 %
 %        File available at : 
 %          http://www.mathworks.fr/matlabcentral/fileexchange/45711
+%          https://github.com/tjbtjbtjb/linfitxy
 %
 
 %---- Default values ----
@@ -97,9 +98,6 @@ cur_ver=ver('MATLAB');
 if isempty(cur_ver)
   matlabmode=0;
 end
-
-%---- Manage hold status
-holdstatus=ishold;
 
 %---- Checking Arguments of the function ----
 
@@ -148,6 +146,11 @@ else
         error('Unknown %s argument',varargin{k});
     end
   end
+end
+
+%---- Manage hold status
+if plotting
+  holdstatus=ishold;
 end
 
 % Impose line vector 
@@ -241,7 +244,7 @@ if nbloop==0
      for i=1:length(xdata)
          plot([xdata(i) xdata(i)],[ydata(i)-yerr ydata(i)+yerr],'-k')
      end   
-     if not(holdstatus) % restore hold status
+     if not(holdstatus) && plotting % restore hold status
          hold off
      end
        return
@@ -394,7 +397,7 @@ if plotting
   
   end %onlyplot
   
-  if not(holdstatus) % restore hold status 
+  if not(holdstatus) && plotting % restore hold status 
     hold off
   end
 
