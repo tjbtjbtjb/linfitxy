@@ -12,6 +12,7 @@ Result of the fit is by default displayed, the best fit and a hull of all the po
 
 Download
 --------
+ - http://tjbtjbtjb.github.io/linfitxy/
  - https://github.com/tjbtjbtjb/linfitxy
  - http://www.mathworks.com/matlabcentral/fileexchange/45711
 

@@ -80,6 +80,9 @@
 %          http://www.mathworks.fr/matlabcentral/fileexchange/45711
 %          https://github.com/tjbtjbtjb/linfitxy
 %
+%        Project url page : 
+%          http://tjbtjbtjb.github.io/linfitxy/
+%
 
 %---- Default values ----
 
