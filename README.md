@@ -1,7 +1,7 @@
 linfitxy
 ========
 
-Linear fit with both uncertainties in x and in y (matlab and octave tool).
+Linear fit with both uncertainties in x and in y (matlab and octave tool). Provide alse the barplotxy tool based on linfitxy which does 2d plots with error bars.
 
 Description
 -----------
